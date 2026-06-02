@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="甘雷，安徽理工大学人工智能学院讲师，个人学术主页。" />
+    <title>甘雷 | 个人学术主页</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="profile-panel">
+        <div class="profile-inner">
+          <div class="avatar" id="avatar" aria-label="甘雷头像占位">
+            <span>甘</span>
+          </div>
+          <h1 id="profileName">甘雷</h1>
+          <p class="profile-title" id="profileTitle">讲师 · 硕士生导师</p>
+          <p class="profile-org" id="profileOrg">安徽理工大学人工智能学院</p>
+
+          <a class="email-link" id="profileEmail" href="mailto:ganlei9696@163.com">
+            <span aria-hidden="true">✉</span>
+            <span>ganlei9696@163.com</span>
+          </a>
+
+          <nav class="side-nav" aria-label="页面导航">
+            <a href="#about">个人简介</a>
+            <a href="#research">研究方向</a>
+            <a href="#news">最新动态</a>
+            <a href="#awards">获奖</a>
+            <a href="#projects">项目</a>
+            <a href="#papers">论文</a>
+            <a href="#patents">专利</a>
+            <a href="#service">帮助</a>
+          </nav>
+
+          <button class="admin-entry" id="adminEntry" type="button">
+            <span aria-hidden="true">✎</span> 本地管理
+          </button>
+          <p class="admin-note" id="adminNote">公开访问为只读模式</p>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="hero">
+          <p class="eyebrow">ACADEMIC HOMEPAGE</p>
+          <h2>人工智能与安全应用</h2>
+          <p>聚焦工业安全智能防控与高端装备智能运维</p>
+        </header>
+
+        <section class="content-section" id="about">
+          <div class="section-heading">
+            <span>01</span>
+            <h2>个人简介</h2>
+          </div>
+          <div class="prose" id="aboutContent"></div>
+        </section>
+
+        <section class="content-section" id="research">
+          <div class="section-heading">
+            <span>02</span>
+            <h2>研究方向</h2>
+          </div>
+          <ul class="tag-list" id="researchContent"></ul>
+        </section>
+
+        <section class="content-section" id="news">
+          <div class="section-heading">
+            <span>03</span>
+            <h2>最新动态</h2>
+          </div>
+          <ul class="timeline" id="newsContent"></ul>
+        </section>
+
+        <section class="content-section" id="awards">
+          <div class="section-heading">
+            <span>04</span>
+            <h2>获奖</h2>
+          </div>
+          <ul class="record-list" id="awardsContent"></ul>
+        </section>
+
+        <section class="content-section" id="projects">
+          <div class="section-heading">
+            <span>05</span>
+            <h2>项目</h2>
+          </div>
+          <ul class="record-list" id="projectsContent"></ul>
+        </section>
+
+        <section class="content-section" id="papers">
+          <div class="section-heading">
+            <span>06</span>
+            <h2>论文</h2>
+          </div>
+          <ul class="record-list" id="papersContent"></ul>
+        </section>
+
+        <section class="content-section" id="patents">
+          <div class="section-heading">
+            <span>07</span>
+            <h2>专利</h2>
+          </div>
+          <ul class="record-list" id="patentsContent"></ul>
+        </section>
+
+        <section class="content-section" id="service">
+          <div class="section-heading">
+            <span>08</span>
+            <h2>帮助</h2>
+          </div>
+          <h3>期刊审稿人</h3>
+          <ul class="record-list compact" id="serviceContent"></ul>
+        </section>
+
+        <footer>
+          <span>© <span id="currentYear"></span> 甘雷</span>
+          <span>最后更新：<span id="lastUpdated"></span></span>
+        </footer>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="loginModal" hidden>
+      <section class="modal login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-button" data-close="loginModal" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">LOCAL ADMIN</p>
+        <h2 id="loginTitle">本地管理验证</h2>
+        <p id="loginHelp">首次使用请设置一个本机管理密码。</p>
+        <label>
+          管理密码
+          <input id="passwordInput" type="password" autocomplete="current-password" />
+        </label>
+        <button class="primary-button" id="loginButton" type="button">进入编辑</button>
+        <p class="form-message" id="loginMessage"></p>
+      </section>
+    </div>
+
+    <div class="editor-drawer" id="editorDrawer" hidden>
+      <header class="editor-header">
+        <div>
+          <p class="eyebrow">OWNER EDITOR</p>
+          <h2>主页内容编辑</h2>
+        </div>
+        <button class="close-button" id="closeEditor" type="button" aria-label="关闭">×</button>
+      </header>
+      <div class="editor-body">
+        <p class="editor-tip">内容仅保存在当前浏览器。列表类内容每行一项；可用“导出数据”备份。</p>
+
+        <div class="field-grid two-columns">
+          <label>姓名<input id="editName" /></label>
+          <label>职称<input id="editTitle" /></label>
+        </div>
+        <label>单位<input id="editOrg" /></label>
+        <label>邮箱<input id="editEmail" type="email" /></label>
+        <label>头像图片地址（可选）<input id="editAvatar" placeholder="例如 ./assets/avatar.jpg" /></label>
+
+        <label>个人简介<textarea id="editAbout" rows="7"></textarea></label>
+        <label>研究方向<textarea id="editResearch" rows="6"></textarea></label>
+        <label>最新动态<textarea id="editNews" rows="6"></textarea></label>
+        <label>获奖<textarea id="editAwards" rows="5"></textarea></label>
+        <label>项目<textarea id="editProjects" rows="6"></textarea></label>
+        <label>论文<textarea id="editPapers" rows="5"></textarea></label>
+        <label>专利<textarea id="editPatents" rows="4"></textarea></label>
+        <label>帮助 · 期刊审稿人<textarea id="editService" rows="6"></textarea></label>
+
+        <div class="editor-actions">
+          <button class="primary-button" id="saveButton" type="button">保存修改</button>
+          <button class="secondary-button" id="exportButton" type="button">导出数据</button>
+          <label class="secondary-button file-button">
+            导入数据
+            <input id="importInput" type="file" accept="application/json" />
+          </label>
+          <button class="text-button" id="resetButton" type="button">恢复初始内容</button>
+        </div>
+        <p class="form-message" id="editorMessage"></p>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

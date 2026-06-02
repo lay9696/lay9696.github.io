@@ -1,0 +1,543 @@
+:root {
+  --navy: #12355b;
+  --navy-deep: #092644;
+  --blue: #2b6f9e;
+  --sky: #eaf3f8;
+  --ink: #24374a;
+  --muted: #6c7a87;
+  --line: #e3e9ee;
+  --paper: #ffffff;
+  --background: #f7f9fb;
+  --gold: #c18a3a;
+  --shadow: 0 18px 50px rgba(17, 53, 91, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  line-height: 1.8;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 340px minmax(0, 880px);
+  justify-content: center;
+  gap: 72px;
+  padding: 56px 48px 72px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(43, 111, 158, 0.08), transparent 24rem),
+    linear-gradient(135deg, #fbfcfd 0%, #f6f9fb 100%);
+}
+
+.profile-panel {
+  position: relative;
+}
+
+.profile-inner {
+  position: sticky;
+  top: 48px;
+  text-align: center;
+  padding: 30px 26px 24px;
+  border: 1px solid rgba(18, 53, 91, 0.1);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.avatar {
+  width: 142px;
+  height: 142px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 5px solid white;
+  border-radius: 50%;
+  color: white;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), transparent),
+    var(--navy);
+  box-shadow: 0 12px 28px rgba(18, 53, 91, 0.2);
+}
+
+.avatar span {
+  font-family: SimSun, serif;
+  font-size: 64px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy-deep);
+  font-family: SimSun, "Songti SC", serif;
+}
+
+.profile-panel h1 {
+  font-size: 31px;
+  letter-spacing: 0.16em;
+}
+
+.profile-title {
+  margin-top: 12px;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.profile-org {
+  margin: 4px 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--blue);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.side-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin: 24px 0 18px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.side-nav a {
+  padding: 7px 4px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.side-nav a:hover {
+  color: white;
+  background: var(--blue);
+}
+
+.admin-entry {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #cad7e0;
+  color: var(--navy);
+  background: transparent;
+  font-size: 13px;
+}
+
+.admin-entry:hover {
+  border-color: var(--blue);
+  background: var(--sky);
+}
+
+.admin-note {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.content {
+  min-width: 0;
+}
+
+.hero {
+  padding: 26px 0 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.hero h2 {
+  margin: 8px 0 7px;
+  font-size: 34px;
+}
+
+.hero > p:last-child {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.content-section {
+  padding: 32px 0 28px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 18px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.section-heading span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.section-heading h2 {
+  font-size: 25px;
+}
+
+.prose p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.tag-list,
+.record-list,
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list li {
+  padding: 7px 13px;
+  border: 1px solid #cfe0eb;
+  color: var(--navy);
+  background: var(--sky);
+  font-size: 14px;
+}
+
+.record-list {
+  display: grid;
+  gap: 10px;
+}
+
+.record-list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.record-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.76em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--blue);
+  background: white;
+  transform: rotate(45deg);
+}
+
+.record-list.compact {
+  margin-top: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 13px;
+}
+
+.timeline time {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 22px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(8, 30, 50, 0.48);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.modal {
+  position: relative;
+  width: min(420px, 100%);
+  padding: 28px;
+  border-radius: 4px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.modal h2,
+.editor-header h2 {
+  margin: 5px 0 10px;
+}
+
+.modal > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+label {
+  display: grid;
+  gap: 5px;
+  margin-top: 14px;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #cad7e0;
+  border-radius: 2px;
+  color: var(--ink);
+  background: white;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(43, 111, 158, 0.12);
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.close-button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.primary-button,
+.secondary-button,
+.text-button {
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.primary-button {
+  color: white;
+  background: var(--navy);
+}
+
+.login-modal .primary-button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.secondary-button {
+  border-color: #cad7e0;
+  color: var(--navy);
+  background: white;
+}
+
+.text-button {
+  color: #a45343;
+  background: transparent;
+}
+
+.form-message {
+  min-height: 1.5em;
+  margin-top: 8px !important;
+  color: #a45343 !important;
+  font-size: 12px !important;
+}
+
+.editor-drawer {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(570px, 100%);
+  overflow-y: auto;
+  border-left: 1px solid #d7e0e6;
+  background: #f9fbfc;
+  box-shadow: -12px 0 38px rgba(17, 53, 91, 0.14);
+}
+
+.editor-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 22px 12px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(249, 251, 252, 0.96);
+}
+
+.editor-body {
+  padding: 6px 22px 24px;
+}
+
+.editor-tip {
+  margin: 14px 0 4px;
+  padding: 10px 12px;
+  color: var(--muted);
+  background: var(--sky);
+  font-size: 12px;
+}
+
+.field-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.file-button {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.file-button input {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 26px 56px;
+  }
+
+  .profile-inner {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-shell {
+    padding: 18px 16px 42px;
+  }
+
+  .profile-inner {
+    padding: 24px 18px 19px;
+  }
+
+  .avatar {
+    width: 116px;
+    height: 116px;
+  }
+
+  .avatar span {
+    font-size: 52px;
+  }
+
+  .hero h2 {
+    font-size: 27px;
+  }
+
+  .record-list.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline li {
+    display: block;
+  }
+
+  .timeline time {
+    display: block;
+  }
+
+  footer,
+  .two-columns {
+    display: block;
+  }
+}
