@@ -7,7 +7,7 @@ const defaultData = {
     title: "讲师 · 硕士生导师",
     org: "安徽理工大学人工智能学院",
     email: "ganlei9696@163.com",
-    avatar: ""
+    avatar: "./photo.jpg"
   },
   about: [
     "甘雷，男，中共党员，合肥工业大学博士。现任安徽理工大学人工智能学院讲师、硕士生导师，兼任教育部重点实验室秘书、安徽省“科技副总”、中国煤炭工业协会创新团队成员。",
@@ -43,12 +43,11 @@ const defaultData = {
     "参与教育部 U40 人才项目、国家自然科学基金重点项目、优秀青年科学基金项目等"
   ],
   papers: [
-    "以第一作者或通讯作者在 ASME 汇刊、《机械工程学报》等期刊发表学术论文 10 余篇。",
-    "论文详情待补充。可通过左侧“本地管理”入口逐条编辑。"
+    "Lei Gan, Hongmeng Xu, Zhengchun Qian, Huanbo Cheng. Process maps of laser melt injection: coating property evolution with macro thermal damage of WC particles[J]. Materials & Design, 2026, 263, 115594.（中科院 2 区，中科协 T1，SCI，IF 7.9）",
+    "甘雷, 王成军, 李磊, 徐鸿蒙, 吴军, 黄海鸿. 基于数据空间混合策略的冲压工艺能量图谱构建及成形质量监测[J]. 机械工程学报, 2026.（中科协 T1，EI）"
   ],
   patents: [
-    "获授权或实审中国发明专利 20 余项。",
-    "专利详情待补充。可通过左侧“本地管理”入口逐条编辑。"
+    "黄海鸿, 甘雷, 汪钊翼等. 面向冲压成形质量监测的工艺能量图谱的生成方法与系统[P]. ZL202310819873.4, 2026-02-05, 中国发明专利.（授权）"
   ],
   service: [
     "IEEE Transactions on Industrial Electronics",
@@ -191,7 +190,7 @@ function closeModal(id) {
 function configureAdminEntry() {
   if (!localEditingAllowed) {
     $("adminEntry").hidden = true;
-    $("adminNote").textContent = "公开访问为只读模式";
+    $("adminNote") = true;
     return;
   }
   $("adminNote").textContent = "仅本机可进入编辑";
