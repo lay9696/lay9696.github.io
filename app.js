@@ -2,7 +2,7 @@ const defaultData = {
   profile: {
     name: "甘雷",
     title: "讲师 · 博士生导师/硕士生导师",
-    org: "安徽理工大学人工智能学院",
+    org: "安徽理工大学 人工智能学院/深部煤炭安全开采与环境保护全国重点实验室/工业粉尘防控与职业安全健康教育部重点实验室",
     email: "ganlei9696@163.com",
     avatar: "./photo.jpg"
   },
