@@ -34,10 +34,7 @@
             <a href="#service">帮助</a>
           </nav>
 
-          <button class="admin-entry" id="adminEntry" type="button">
-            <span aria-hidden="true">✎</span> 本地管理
-          </button>
-          <p class="admin-note" id="adminNote"></p>
+          
         </div>
       </aside>
 
@@ -120,62 +117,7 @@
       </main>
     </div>
 
-    <div class="modal-backdrop" id="loginModal" hidden>
-      <section class="modal login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
-        <button class="close-button" data-close="loginModal" type="button" aria-label="关闭">×</button>
-        <p class="eyebrow">LOCAL ADMIN</p>
-        <h2 id="loginTitle">本地管理验证</h2>
-        <p id="loginHelp">首次使用请设置一个本机管理密码。</p>
-        <label>
-          管理密码
-          <input id="passwordInput" type="password" autocomplete="current-password" />
-        </label>
-        <button class="primary-button" id="loginButton" type="button">进入编辑</button>
-        <p class="form-message" id="loginMessage"></p>
-      </section>
-    </div>
-
-    <div class="editor-drawer" id="editorDrawer" hidden>
-      <header class="editor-header">
-        <div>
-          <p class="eyebrow">OWNER EDITOR</p>
-          <h2>主页内容编辑</h2>
-        </div>
-        <button class="close-button" id="closeEditor" type="button" aria-label="关闭">×</button>
-      </header>
-      <div class="editor-body">
-        <p class="editor-tip">内容仅保存在当前浏览器。列表类内容每行一项；可用“导出数据”备份。</p>
-
-        <div class="field-grid two-columns">
-          <label>姓名<input id="editName" /></label>
-          <label>职称<input id="editTitle" /></label>
-        </div>
-        <label>单位<input id="editOrg" /></label>
-        <label>邮箱<input id="editEmail" type="email" /></label>
-        <label>头像图片地址（可选）<input id="editAvatar" placeholder="例如 ./assets/avatar.jpg" /></label>
-
-        <label>个人简介<textarea id="editAbout" rows="7"></textarea></label>
-        <label>研究方向<textarea id="editResearch" rows="6"></textarea></label>
-        <label>最新动态<textarea id="editNews" rows="6"></textarea></label>
-        <label>获奖<textarea id="editAwards" rows="5"></textarea></label>
-        <label>项目<textarea id="editProjects" rows="6"></textarea></label>
-        <label>论文<textarea id="editPapers" rows="5"></textarea></label>
-        <label>专利<textarea id="editPatents" rows="4"></textarea></label>
-        <label>帮助 · 期刊审稿人<textarea id="editService" rows="6"></textarea></label>
-
-        <div class="editor-actions">
-          <button class="primary-button" id="saveButton" type="button">保存修改</button>
-          <button class="secondary-button" id="exportButton" type="button">导出数据</button>
-          <label class="secondary-button file-button">
-            导入数据
-            <input id="importInput" type="file" accept="application/json" />
-          </label>
-          <button class="text-button" id="resetButton" type="button">恢复初始内容</button>
-        </div>
-        <p class="form-message" id="editorMessage"></p>
-      </div>
-    </div>
-
+    
     <script src="./app.js"></script>
   </body>
 </html>
