@@ -1,7 +1,7 @@
 const defaultData = {
   profile: {
     name: "甘雷",
-    title: "讲师 · 硕士生导师",
+    title: "讲师 · 博士生导师/硕士生导师",
     org: "安徽理工大学人工智能学院",
     email: "ganlei9696@163.com",
     avatar: "./photo.jpg"
